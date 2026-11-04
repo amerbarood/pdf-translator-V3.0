@@ -1,0 +1,5 @@
+# Optional: offline translation (Argos Translate models) and word synonyms/meanings (WordNet).
+ctranslate2>=3.20
+sentencepiece>=0.1.99
+nltk>=3.8
+langdetect>=1.0.9

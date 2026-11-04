@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-translator"
+version = "1.0.0"
+description = "Desktop PDF reader with side-by-side translation (Google online, or offline with open-source models)."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Aamer Barood" }]
+dependencies = ["PySide6>=6.5", "PyMuPDF>=1.23", "requests>=2.28"]
+
+[project.optional-dependencies]
+offline = ["ctranslate2>=3.20", "sentencepiece>=0.1.99", "nltk>=3.8", "langdetect>=1.0.9"]
+dev = ["pytest>=7"]
+
+[project.gui-scripts]
+pdftranslator = "pdftranslator.app:main"
+
+[tool.setuptools]
+packages = ["pdftranslator"]
+
+[tool.setuptools.package-data]
+pdftranslator = ["resources/*"]
