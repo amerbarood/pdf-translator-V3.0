@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 430" width="1080" height="430" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a94a8"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1c3f9e" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="head" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6fe0"/>
+      <stop offset="1" stop-color="#1c3f9e"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1080" height="430" rx="20" fill="#f7f9fd"/>
+  <text x="40" y="48" font-size="22" font-weight="700" fill="#1d2433">How a translation is made</text>
+  <text x="40" y="74" font-size="14" fill="#5b6475">From the moment you let go of the mouse to the text in the panel</text>
+
+  <!-- 1 input -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="110" width="170" height="120" rx="14" fill="url(#head)"/>
+  </g>
+  <text x="125" y="144" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">You select text</text>
+  <text x="125" y="170" text-anchor="middle" font-size="12.5" fill="#dce7ff">drag, double-click a word,</text>
+  <text x="125" y="188" text-anchor="middle" font-size="12.5" fill="#dce7ff">or Translate Page</text>
+  <text x="125" y="214" text-anchor="middle" font-size="11.5" fill="#b9cdf7">pdf_view.py</text>
+
+  <!-- 2 clean up -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="110" width="170" height="120" rx="14" fill="#fff" stroke="#d7deeb"/>
+  </g>
+  <text x="335" y="144" text-anchor="middle" font-size="15" font-weight="700" fill="#1d2433">Clean up</text>
+  <text x="335" y="170" text-anchor="middle" font-size="12.5" fill="#5b6475">rejoin PDF lines into</text>
+  <text x="335" y="188" text-anchor="middle" font-size="12.5" fill="#5b6475">paragraphs, fix hyphens</text>
+  <text x="335" y="214" text-anchor="middle" font-size="11.5" fill="#8a94a8">text_tools.py</text>
+
+  <!-- 3 saved -->
+  <g filter="url(#shadow)">
+    <rect x="460" y="110" width="170" height="120" rx="14" fill="#fff" stroke="#d7deeb"/>
+  </g>
+  <text x="545" y="144" text-anchor="middle" font-size="15" font-weight="700" fill="#1d2433">Saved before?</text>
+  <text x="545" y="170" text-anchor="middle" font-size="12.5" fill="#5b6475">yes → shown instantly,</text>
+  <text x="545" y="188" text-anchor="middle" font-size="12.5" fill="#5b6475">no internet needed</text>
+  <text x="545" y="214" text-anchor="middle" font-size="11.5" fill="#8a94a8">cache.py</text>
+
+  <!-- 4a online -->
+  <g filter="url(#shadow)">
+    <rect x="680" y="96" width="190" height="104" rx="14" fill="#fff" stroke="#9cc0f5" stroke-width="1.5"/>
+  </g>
+  <rect x="696" y="110" width="58" height="20" rx="10" fill="#e3edfd"/>
+  <text x="725" y="124" text-anchor="middle" font-size="11" font-weight="700" fill="#2f6fe0">ONLINE</text>
+  <text x="696" y="152" font-size="14" font-weight="700" fill="#1d2433">Google Translate</text>
+  <text x="696" y="172" font-size="12" fill="#5b6475">2 endpoints, switches on 429</text>
+  <text x="696" y="189" font-size="12" fill="#5b6475">retries timeouts · online.py</text>
+
+  <!-- 4b offline -->
+  <g filter="url(#shadow)">
+    <rect x="680" y="216" width="190" height="104" rx="14" fill="#fff" stroke="#a6dcb8" stroke-width="1.5"/>
+  </g>
+  <rect x="696" y="230" width="64" height="20" rx="10" fill="#e2f5e8"/>
+  <text x="728" y="244" text-anchor="middle" font-size="11" font-weight="700" fill="#1f8a4c">OFFLINE</text>
+  <text x="696" y="272" font-size="14" font-weight="700" fill="#1d2433">Argos models</text>
+  <text x="696" y="292" font-size="12" fill="#5b6475">CTranslate2, per sentence</text>
+  <text x="696" y="309" font-size="12" fill="#5b6475">sv → en → ar · offline.py</text>
+
+  <!-- 5 panel -->
+  <g filter="url(#shadow)">
+    <rect x="910" y="110" width="140" height="210" rx="14" fill="url(#head)"/>
+  </g>
+  <text x="980" y="144" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Panel</text>
+  <text x="980" y="174" text-anchor="middle" font-size="12.5" fill="#dce7ff">translation</text>
+  <text x="980" y="194" text-anchor="middle" font-size="12.5" fill="#dce7ff">right-to-left</text>
+  <text x="980" y="214" text-anchor="middle" font-size="12.5" fill="#dce7ff">for Arabic</text>
+  <text x="980" y="244" text-anchor="middle" font-size="12.5" fill="#dce7ff">original text</text>
+  <text x="980" y="264" text-anchor="middle" font-size="12.5" fill="#dce7ff">🔊 read aloud</text>
+  <text x="980" y="300" text-anchor="middle" font-size="11.5" fill="#b9cdf7">panel.py</text>
+
+  <!-- arrows -->
+  <path d="M210,170 L246,170" stroke="#8a94a8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M420,170 L456,170" stroke="#8a94a8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M630,160 C655,160 655,148 676,148" stroke="#8a94a8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M630,182 C655,182 655,268 676,268" stroke="#8a94a8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M870,148 C890,148 888,170 906,170" stroke="#8a94a8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M870,268 C890,268 888,250 906,250" stroke="#8a94a8" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <!-- cache hit straight to the panel -->
+  <path d="M545,110 C545,62 980,62 980,106" stroke="#b7bfce" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#arrow)"/>
+  <text x="762" y="70" text-anchor="middle" font-size="11.5" fill="#8a94a8">already saved</text>
+
+  <!-- word details band -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="350" width="620" height="54" rx="14" fill="#fff8e8" stroke="#f1d38a"/>
+  </g>
+  <text x="270" y="374" font-size="13.5" font-weight="700" fill="#7a5600">Words and short phrases (up to 3 words)</text>
+  <text x="270" y="393" font-size="12.5" fill="#8a6a1a">+ other possible translations, WordNet synonyms and meanings, Google dictionary meanings</text>
+  <path d="M775,320 L775,346" stroke="#e0b44a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M870,377 C960,377 980,360 980,324" stroke="#e0b44a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+</svg>

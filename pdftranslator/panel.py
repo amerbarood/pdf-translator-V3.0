@@ -48,7 +48,10 @@ class TranslationPanel(QWidget):
         self.title = QLabel("Translation")
         font = self.title.font()
         font.setBold(True)
-        font.setPointSizeF(font.pointSizeF() + 1)
+        if font.pointSizeF() > 0:
+            font.setPointSizeF(font.pointSizeF() + 1)
+        else:
+            font.setPixelSize(font.pixelSize() + 1)
         self.title.setFont(font)
         self.status = QLabel("")
         self.status.setStyleSheet("color: gray;")
@@ -132,7 +135,7 @@ class TranslationPanel(QWidget):
 
         if result is not None and source_text:
             parts.append(_paragraphs(result.text, f'dir="{t_dir}" align="{t_align}" '
-                                                  f'style="font-size:{px(1)}; line-height:130%;"'))
+                                                  f'style="font-size:{px(1)}; line-height:120%;"'))
 
             if result.alternatives:
                 sep = "  ،  " if target_rtl else "  ·  "
