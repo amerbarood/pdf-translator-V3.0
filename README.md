@@ -69,8 +69,8 @@ It works **online** with Google Translate, or **offline** with open-source
 Needs Python 3.9 or newer.
 
 ```bash
-git clone https://github.com/amerbarood/pdf-translator.git
-cd pdf-translator
+git clone https://github.com/amerbarood/pdf-translator-V3.0.git
+cd pdf-translator-V3.0
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
